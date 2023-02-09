@@ -15,7 +15,7 @@ countryInput.addEventListener('input', debounce(onInputChange, DEBOUNCE_DELAY));
 
 countryInput.insertAdjacentHTML(
   'beforebegin',
-  '<header><h1>Country Finder</h1></header>'
+  '<header><h1>Country Search</h1></header>'
 );
 
 function onInputChange() {
@@ -63,7 +63,7 @@ function createCountryCard(country) {
             }</span></p>
             <p class="country-card--field">Languages: <span class="country-value">${Object.values(
               c.languages
-            ).join(',')}</span></p>
+            ).join(', ')}</span></p>
     </div>`;
   countryInfo.innerHTML = readyCard;
 }
